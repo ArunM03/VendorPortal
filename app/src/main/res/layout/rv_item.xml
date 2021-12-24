@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/grey_300">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_store_id"
+                android:text="Store ID"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_store_id_data"
+                android:text="Store ID"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_number_id"
+                android:text="Store Number"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_store_number_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_storename_id"
+                android:text="Store Name"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_storename_id_data"
+                android:text="Store Name Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_totalqty_id"
+                android:text="Total Qty"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_totalqty_id_data"
+                android:text="Total Qty Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:paddingBottom="16dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_sales_id"
+                android:text="Total Sales"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_sales_id_data"
+                android:text="Total Sales Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+    </TableLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
