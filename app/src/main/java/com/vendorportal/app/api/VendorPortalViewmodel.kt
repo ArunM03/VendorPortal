@@ -37,9 +37,9 @@ class VendorPortalViewmodel : ViewModel(){
         }
     }
 
-    fun  getReports(logon : String, password : String, isAdmin : Boolean) = viewModelScope.launch(Dispatchers.IO) {
+    fun  getReportsByGet(headers: Map<String, String>) = viewModelScope.launch(Dispatchers.IO) {
         try {
-            val response = RetrofitInstance.api.getReports(logon, password, isAdmin)
+            val response = RetrofitInstance.api.getReportsByGet(headers)
             if (response.isSuccessful){
                 response.body()?.let {
                     if (it.status == 200){

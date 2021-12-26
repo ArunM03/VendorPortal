@@ -3,6 +3,8 @@ package com.vendorportal.app.api
 import com.vendorportal.app.data.LoginResponseData
 import com.vendorportal.app.data.ReportResponse
 import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.HeaderMap
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -21,8 +23,15 @@ interface VendorPortalInterface {
 
 
 
+    @GET("api/Reports")
+    suspend fun getReportsByGet(
+        @HeaderMap headers: Map<String, String>
+    ) : Response<ReportResponse>
+
+
+
     @POST("api/Reports")
-    suspend fun getReports(
+    suspend fun getReportsByPost(
         @Query("Logon")
         logon : String,
         @Query("Password")

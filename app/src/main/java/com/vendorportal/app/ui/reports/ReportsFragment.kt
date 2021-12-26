@@ -30,7 +30,6 @@ class ReportsFragment : Fragment(R.layout.fragment_reports) {
 
         setUI()
 
-
     }
 
     private fun setUI() {
