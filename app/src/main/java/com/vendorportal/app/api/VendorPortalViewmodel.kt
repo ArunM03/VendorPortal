@@ -3,6 +3,7 @@ package com.vendorportal.app.api
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.vendorportal.app.data.GetReportResponse
 import com.vendorportal.app.data.LoginResponseData
 import com.vendorportal.app.data.ReportResponse
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +15,7 @@ class VendorPortalViewmodel : ViewModel(){
     var loginLive : MutableLiveData<LoginResponseData> = MutableLiveData()
     var errorLoginLive : MutableLiveData<String> = MutableLiveData()
 
-    var reportsLive : MutableLiveData<ReportResponse> = MutableLiveData()
+    var reportsLive : MutableLiveData<GetReportResponse> = MutableLiveData()
     var errorReportsLive : MutableLiveData<String> = MutableLiveData()
 
 

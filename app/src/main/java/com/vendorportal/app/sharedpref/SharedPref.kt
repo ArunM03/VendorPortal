@@ -11,6 +11,7 @@ class SharedPref(private val context: Context) {
     val USERAUTHSTATUS = "UserAuthStatus"
     val LOGINCODE = "LoginCode"
     val PASSWORD = "Password"
+    val TOKEN  = "Token"
 
 
     fun setUserAuthStatus(status : Boolean){
@@ -40,6 +41,17 @@ class SharedPref(private val context: Context) {
 
     fun getPassword() : String?{
         return sharedPref.getString(PASSWORD,"")
+    }
+
+    fun saveToken(token : String) {
+        editor.apply {
+            putString(TOKEN, token)
+            apply()
+        }
+    }
+
+    fun getToken() : String?{
+        return sharedPref.getString(TOKEN,"")
     }
 
 

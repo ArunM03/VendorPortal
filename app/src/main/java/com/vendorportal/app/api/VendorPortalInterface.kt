@@ -1,5 +1,6 @@
 package com.vendorportal.app.api
 
+import com.vendorportal.app.data.GetReportResponse
 import com.vendorportal.app.data.LoginResponseData
 import com.vendorportal.app.data.ReportResponse
 import retrofit2.Response
@@ -26,7 +27,7 @@ interface VendorPortalInterface {
     @GET("api/Reports")
     suspend fun getReportsByGet(
         @HeaderMap headers: Map<String, String>
-    ) : Response<ReportResponse>
+    ) : Response<GetReportResponse>
 
 
 

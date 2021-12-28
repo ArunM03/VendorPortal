@@ -42,19 +42,17 @@ class ReportsFragment : Fragment(R.layout.fragment_reports) {
 
         sharedPref = SharedPref(requireContext())
 
+        val token = sharedPref.getToken().toString()
 
-
-        val loginCode = sharedPref.getLoginCode()
-        val password = sharedPref.getPassword()
-
-      //  myToast.showToast("$loginCode and $password")
-
-        viewmodel.getReports(loginCode.toString(),password.toString(),true)
-
-
+        viewmodel.getReportsByGet(getHeaderMap(token))
 
     }
 
+    private fun getHeaderMap(token : String): Map<String, String> {
+        val headerMap = mutableMapOf<String, String>()
+        headerMap["Authorization"] = "Bearer $token"
+        return headerMap
+    }
 
     private fun setCallbacks() {
 

@@ -6,22 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.vendorportal.app.R
-import com.vendorportal.app.data.ReportData
+import com.vendorportal.app.data.GetReportData
+import com.vendorportal.app.databinding.RvItemBinding
+import com.vendorportal.app.databinding.RvReportBinding
 import java.util.*
 
 
-class ReportAdapter(var itemscopy : MutableList<ReportData>, val context : Context)  : RecyclerView.Adapter<ReportAdapter.ReportViewHolder>() {
+class ReportAdapter(var itemscopy : MutableList<GetReportData>, val context : Context)  : RecyclerView.Adapter<ReportAdapter.ReportViewHolder>() {
 
-    class ReportViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class ReportViewHolder(val binding : RvReportBinding) : RecyclerView.ViewHolder(binding.root)
 
-    private var onItemClickListener: ((ReportData) -> Unit)? = null
+    private var onItemClickListener: ((GetReportData) -> Unit)? = null
 
-    fun setOnItemClickListener(position: (ReportData) -> Unit) {
+    fun setOnItemClickListener(position: (GetReportData) -> Unit) {
         onItemClickListener = position
     }
 
 
-    var items = mutableListOf<ReportData>()
+    var items = mutableListOf<GetReportData>()
 
     init {
         items = itemscopy
@@ -29,17 +31,15 @@ class ReportAdapter(var itemscopy : MutableList<ReportData>, val context : Conte
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReportViewHolder {
-        return ReportViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.rv_item,
-                parent,
-                false
-            )
+        val binding = RvReportBinding.inflate(LayoutInflater.from(parent.context),
+            parent,
+            false
         )
+        return ReportViewHolder(binding)
     }
 
 
-    fun filter(text: String) {
+/*    fun filter(text: String) {
         var text = text
         items.clear()
         if (text.isEmpty()) {
@@ -47,7 +47,7 @@ class ReportAdapter(var itemscopy : MutableList<ReportData>, val context : Conte
         } else {
             text = text.lowercase(Locale.getDefault())
             for (item in itemscopy) {
-                if (item.text.lowercase(Locale.getDefault()).contains(text)
+                if (item.productDescription.lowercase(Locale.getDefault()).contains(text)
                 ) {
                     items.add(item)
                 }
@@ -55,13 +55,17 @@ class ReportAdapter(var itemscopy : MutableList<ReportData>, val context : Conte
         }
       //  Toast.makeText(context,"items ${items.size} and itemscopy ${itemscopy.size}", Toast.LENGTH_SHORT).show()
         notifyDataSetChanged()
-    }
+    }*/
 
 
     override fun onBindViewHolder(holder: ReportViewHolder, position: Int) {
         val report = items[position]
         holder.itemView.apply {
+            with(holder){
 
+                binding.tvReportname.text = report.text
+
+            }
 
 
             setOnClickListener {
