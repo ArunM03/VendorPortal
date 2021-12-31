@@ -15,7 +15,11 @@
         android:id="@+id/reportsFragment"
         android:name="com.vendorportal.app.ui.reports.ReportsFragment"
         android:label="@string/reports"
-        tools:layout="@layout/fragment_reports" />
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_reportsListFragment"
+            app:destination="@id/report" />
+    </fragment>
 
     <fragment
         android:id="@+id/ordersFragment"
@@ -32,4 +36,8 @@
             app:popUpTo="@+id/mobile_navigation"
             app:popUpToInclusive="true"/>
     </fragment>
+    <fragment
+        android:id="@+id/report"
+        android:name="com.vendorportal.app.ui.reports.ReportsListFragment"
+        android:label="Reports" />
 </navigation>

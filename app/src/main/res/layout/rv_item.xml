@@ -10,7 +10,9 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TableRow>
+        <TableRow
+            android:id="@+id/storeId"
+            android:visibility="gone">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -30,7 +32,9 @@
                 android:paddingTop="16dp"
                 android:textStyle="bold"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:id="@+id/storeNumber"
+            android:visibility="gone">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,7 +54,207 @@
                 android:paddingTop="16dp"
                 android:textStyle="bold"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:id="@+id/divisionNumber"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_divisionNumber"
+                android:text="Division Number"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_divisionNumber_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/prodcode"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_prodCode"
+                android:text="ProdCode"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_prodCode_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/productdescription"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_productDescription"
+                android:text="Product Description"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_productDescription_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/mfgname"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_mfgName"
+                android:text="Mfg Name"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_mfgName_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/booth"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_booth"
+                android:text="Booth"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_booth_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/itemcode"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_itemCode"
+                android:text="Item Code"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_itemCode_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/description"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_description"
+                android:text="Description"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_description_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/division"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_division"
+                android:text="Division"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_division_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/divisioname"
+            android:visibility="gone">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_divisionName"
+                android:text="Division Name"
+                android:textColor="@color/app_primary_900"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_divisionName_data"
+                android:text="Store Number Data"
+                android:paddingTop="16dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/storename"
+            android:visibility="gone">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,7 +274,9 @@
                 android:paddingTop="16dp"
                 android:textStyle="bold"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:id="@+id/totalqty"
+            android:visibility="gone">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,6 +297,8 @@
                 android:textStyle="bold"/>
         </TableRow>
         <TableRow
+            android:id="@+id/totalsales"
+            android:visibility="gone"
             android:paddingBottom="16dp">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"

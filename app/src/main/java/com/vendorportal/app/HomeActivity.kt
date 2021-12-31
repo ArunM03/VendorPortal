@@ -1,5 +1,6 @@
 package com.vendorportal.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
@@ -13,13 +14,15 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.vendorportal.app.databinding.ActivityHomeBinding
+import com.vendorportal.app.others.Constants
+import com.vendorportal.app.others.MyToast
 import com.vendorportal.app.sharedpref.SharedPref
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding
-
+    lateinit var myToast: MyToast
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarHome.toolbar)
 
 
-
+        myToast = MyToast(this)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -48,16 +51,41 @@ class HomeActivity : AppCompatActivity() {
         val sharedPref = SharedPref(this)
 
         if (sharedPref.getUserAuthStatus()){
+       //     myToast.showToast("user logged in")
             navController.navigate(R.id.dashboardFragment)
         }else{
+         //   myToast.showToast("user not  logged in")
             navController.navigate(R.id.loginFragment)
         }
+
+        navView.setNavigationItemSelectedListener {
+
+            when(it.itemId){
+
+                R.id.logout -> {
+                    sharedPref.setUserAuthStatus(false)
+                    sharedPref.saveLoginCode("")
+                    sharedPref.savePassword("")
+                    sharedPref.saveToken("")
+                    startActivity(Intent(this,HomeActivity::class.java))
+                }
+            }
+
+            return@setNavigationItemSelectedListener true
+        }
+
+    //   myToast.showToast("function calling")
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
             when(destination.id) {
 
                 R.id.loginFragment -> hideToolbar()
+
+                R.id.report -> {
+                    showToolbar()
+                    binding.appBarHome.toolbar.title = Constants.reportName
+                }
 
                 else -> showToolbar()
             }

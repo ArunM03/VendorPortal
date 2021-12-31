@@ -12,6 +12,7 @@ class SharedPref(private val context: Context) {
     val LOGINCODE = "LoginCode"
     val PASSWORD = "Password"
     val TOKEN  = "Token"
+    val WEBURL  = "Weburl"
 
 
     fun setUserAuthStatus(status : Boolean){
@@ -28,9 +29,22 @@ class SharedPref(private val context: Context) {
         }
     }
 
+
+    fun saveWebUrl(url : String) {
+        editor.apply {
+            putString(WEBURL, url)
+            apply()
+        }
+    }
+
     fun getLoginCode() : String?{
         return sharedPref.getString(LOGINCODE,"")
     }
+
+    fun getWebUrl() : String?{
+        return sharedPref.getString(WEBURL,"")
+    }
+
 
     fun savePassword(password : String) {
         editor.apply {

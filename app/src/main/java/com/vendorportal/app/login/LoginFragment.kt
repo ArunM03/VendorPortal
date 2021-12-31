@@ -51,6 +51,7 @@ class LoginFragment : Fragment(R.layout.fragment_login_admin) {
             myToast.showToast("Logged In Successfully")
             myDialog.dismissProgressDialog()
             sharedPref.setUserAuthStatus(true)
+            sharedPref.saveWebUrl(it.data)
             sharedPref.saveToken(it.token)
             Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_dashboardFragment)
         })

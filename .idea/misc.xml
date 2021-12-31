@@ -3,13 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/app_bar_home.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/drawable-anydpi/ic_action_home.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/drawable-anydpi/ic_action_logout.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/drawable-anydpi/ic_action_orders.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/drawable-anydpi/ic_action_reports.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/app_bar_home.xml" value="0.15" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/content_home.xml" value="0.18" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/dialog_progress.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/fragment_login_admin.xml" value="0.22" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/fragment_login_vendor.xml" value="0.22" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/fragment_orders.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/fragment_reports.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/nav_header_home.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/rv_item.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/layout/rv_report.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/VendorPortal/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />

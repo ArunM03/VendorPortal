@@ -5,19 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_login_vendor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="LOGIN"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_login"
         android:layout_width="0dp"
@@ -27,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_login_vendor"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.3" />
 
     <com.google.android.material.textview.MaterialTextView

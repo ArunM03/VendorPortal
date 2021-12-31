@@ -18,6 +18,9 @@ class VendorPortalViewmodel : ViewModel(){
     var reportsLive : MutableLiveData<GetReportResponse> = MutableLiveData()
     var errorReportsLive : MutableLiveData<String> = MutableLiveData()
 
+    var reportsByPostLive : MutableLiveData<ReportResponse> = MutableLiveData()
+    var errorreportsByPostLive : MutableLiveData<String> = MutableLiveData()
+
 
     fun  login(logon : String, password : String, isAdmin : Boolean) = viewModelScope.launch(Dispatchers.IO) {
         try {
@@ -54,6 +57,26 @@ class VendorPortalViewmodel : ViewModel(){
             }
         }catch (e:Exception){
             errorReportsLive.postValue(e.message)
+        }
+    }
+
+    fun  getReportsByPost( headers: Map<String, String>, id : Int) = viewModelScope.launch(Dispatchers.IO) {
+        try {
+            val response = RetrofitInstance.api.getReportsByPost(headers,id)
+        /*    errorreportsByPostLive.postValue("Response unsuccessful ${response}")*/
+            if (response.isSuccessful){
+                response.body()?.let {
+                    if (it.status == 200){
+                        reportsByPostLive.postValue(it)
+                    }else{
+                        errorreportsByPostLive.postValue(it.message)
+                    }
+                }
+            }else{
+                errorreportsByPostLive.postValue("Response unsuccessful ${response.errorBody()}")
+            }
+        }catch (e:Exception){
+            errorreportsByPostLive.postValue(e.message)
         }
     }
 }
