@@ -41,8 +41,7 @@ class HomeActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.dashboardFragment, R.id.reportsFragment, R.id.ordersFragment
-            ), drawerLayout
+                R.id.dashboardFragment, R.id.reportsFragment), drawerLayout
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -58,22 +57,14 @@ class HomeActivity : AppCompatActivity() {
             navController.navigate(R.id.loginFragment)
         }
 
-        navView.setNavigationItemSelectedListener {
-
-            when(it.itemId){
-
-                R.id.logout -> {
-                    sharedPref.setUserAuthStatus(false)
-                    sharedPref.saveLoginCode("")
-                    sharedPref.savePassword("")
-                    sharedPref.saveToken("")
-                    startActivity(Intent(this,HomeActivity::class.java))
-                }
-            }
-
-            return@setNavigationItemSelectedListener true
+        binding.navView.menu.findItem(R.id.logout).setOnMenuItemClickListener {
+            sharedPref.setUserAuthStatus(false)
+            sharedPref.saveLoginCode("")
+            sharedPref.savePassword("")
+            sharedPref.saveToken("")
+            startActivity(Intent(this,HomeActivity::class.java))
+            true
         }
-
     //   myToast.showToast("function calling")
 
         navController.addOnDestinationChangedListener { _, destination, _ ->

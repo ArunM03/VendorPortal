@@ -34,6 +34,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         val webUrl = sharedPref.getWebUrl()
 
         binding.webViewDashboard.settings.javaScriptEnabled = true
+        binding.webViewDashboard.settings.builtInZoomControls = true
         binding.webViewDashboard.loadUrl(webUrl.toString())
 
 

@@ -13,10 +13,6 @@
             android:icon="@drawable/ic_action_reports"
             android:title="@string/reports" />
         <item
-            android:id="@+id/ordersFragment"
-            android:icon="@drawable/ic_action_orders"
-            android:title="@string/orders" />
-        <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_action_logout"
             android:title="@string/logoff" />
